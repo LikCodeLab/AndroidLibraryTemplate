@@ -11,5 +11,5 @@ dependencies {
     implementation depK.core
     implementation depX.appcompat
     implementation depX.material
-    implementation depX.constraintlayout
+    implementation 'com.github.kennielab:KennieRes:v0.0.1'
 }
