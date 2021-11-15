@@ -25,6 +25,18 @@ Android Library 模板库
 
 **开源不易，如果喜欢的话希望给个 `Star` 或 `Fork` ^_^ ，谢谢~~**
 
+## 功能及特点
+
+- XX、XX、XX、XX；
+
+## APP下载
+
+- [酷安下载]()
+- [GitHub下载](https://gitee.com/kenniecode/kennie-android/tree/template%2Flibrary/releases) [![](https://img.shields.io/badge/Download-apk-green.svg)](https://gitee.com/kenniecode/kennie-android/tree/template%2Flibrary/releases/app-release.apk)
+- 扫码
+
+![](./resources/download_qr_code.png)
+
 
 ## 预览
 
