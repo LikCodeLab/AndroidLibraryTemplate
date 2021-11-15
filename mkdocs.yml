@@ -12,6 +12,8 @@ theme:
   name: material
   
 nav:
-  - 使用: index.md
-  - 开发日志: dev_log.md
-  - 更新日志: update_log.md
+  - 简介: index.md
+  - 基础使用: 基础使用.md
+  - 开发日志: DEVLOG.md
+  - 更新日志: UPDATELOG.md
+  - 常见问题: QA.md
