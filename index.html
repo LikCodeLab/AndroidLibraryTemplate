@@ -533,7 +533,6 @@
 </blockquote>
 <h3 id="_4">📥引入</h3>
 <h4 id="gradle-jitpack">方式一：Gradle 引入  jitPack 源</h4>
-<p>Latest Version：<a href="https://jitpack.io/#kennielab/KennieLibTemplate"><img alt="" src="https://jitpack.io/v/kennielab/KennieLibTemplate.svg" /></a></p>
 <p>1) 在 project 的 build.gradle 文件中找到 <code>allprojects{}</code> 代码块添加以下代码：</p>
 <pre><code>allprojects {
     repositories {
@@ -545,6 +544,7 @@
 </code></pre>
 <p>⚠️请注意，使用 Android Studio 北极狐版本（Arctic Fox）创建的项目，需要您前往 settings.gradle 添加上述 jitpack 仓库配置。</p>
 <p>2) 在 app 的 build.gradle 文件中找到 <code>dependencies{}</code> 代码块，并在其中加入以下语句：</p>
+<p>Latest Version：<a href="https://jitpack.io/#kennielab/KennieLibTemplate"><img alt="" src="https://jitpack.io/v/kennielab/KennieLibTemplate.svg" /></a></p>
 <pre><code>def lib = &quot;0.0.2&quot;
 implementation &quot;com.github.kennielab:KennieLibTemplate:${lib}&quot;
 </code></pre>
