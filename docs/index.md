@@ -28,8 +28,6 @@ Library是一个功能非常强悍的XXXX库，使用XXXX + XXXX + XXXX组合进
 
 #### 方式一：Gradle 引入  jitPack 源
 
-Latest Version：[![](https://jitpack.io/v/kennielab/KennieLibTemplate.svg)](https://jitpack.io/#kennielab/KennieLibTemplate)
-
 1) 在 project 的 build.gradle 文件中找到 `allprojects{}` 代码块添加以下代码：
 
 ```
@@ -45,6 +43,8 @@ allprojects {
 ⚠️请注意，使用 Android Studio 北极狐版本（Arctic Fox）创建的项目，需要您前往 settings.gradle 添加上述 jitpack 仓库配置。
 
 2) 在 app 的 build.gradle 文件中找到 `dependencies{}` 代码块，并在其中加入以下语句：
+
+Latest Version：[![](https://jitpack.io/v/kennielab/KennieLibTemplate.svg)](https://jitpack.io/#kennielab/KennieLibTemplate)
 
 ```
 def lib = "0.0.2"
