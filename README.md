@@ -31,7 +31,6 @@ Android Library 模板库
 
 ## APP下载
 
-- [酷安下载]()
 - [GitHub下载](https://gitee.com/kenniecode/kennie-android/tree/template%2Flibrary/releases) [![](https://img.shields.io/badge/Download-apk-green.svg)](https://gitee.com/kenniecode/kennie-android/tree/template%2Flibrary/releases/app-release.apk)
 - 扫码
 
