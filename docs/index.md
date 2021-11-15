@@ -69,3 +69,29 @@ repositories{
 implementation(name: 'AAR文件名', ext: 'aar')
 ```
 
+## 注意事项
+
+> **使用前请查看注意事项**，当前版本仅支持AndroidX
+
+### 构建环境
+
+> 最低支持api 21
+
+    compileSdk 30
+    minSdk 21
+    targetSdk 30
+
+> 开发环境
+
+    AndroidStudio ArcticFox 2020.3.1
+    JDK 1.8 || JDK 11
+    kotlin 1.5.31
+    gradle-7.0.2-bin & gradle 7.0.2
+
+> 运行环境
+
+   手机端 Android7.0 ~ Android 11.0
+
+## 联系方式
+- 微信：**lkweixh**
+- 邮箱：245794335@qq.com
