@@ -5,7 +5,7 @@
 <p align="center">
     <strong>Android Library 模板库</strong>
     <br>
-    <!-- <a href="https://kennielab.github.io/KennieLetterIndexBar/">使用文档</a> -->
+    <a href="https://kennielab.github.io/KennieLibTemplate/">使用文档</a>
     <br>
 </p>
 
@@ -38,8 +38,7 @@ Android Library 模板库
 
 ## 开始使用
 因为依赖的关系，KennieLibTemplate 目前仅支持 AndroidX 作为基础进行开发，若您正在使用最新版本的 Android Studio，那么默认创建的项目就是使用 AndroidX 作为底层框架的。
-
-**以下2种引入方式请任选其一。**
+> **使用前请查看注意事项**，当前版本仅支持AndroidX
 
 ### 📥引入
 
@@ -68,25 +67,6 @@ allprojects {
 ```
 def lib = "0.0.2"
 implementation "com.github.kennielab:KennieLibTemplate:${lib}"
-```
-
-#### 方式二：直接引入 AAR 包文件
-
-请前往 [Release](https://github.com/kongzue/KennieLibTemplate/releases) 页面根据需要版本的下载 AAR 包文件。
-
-1) 将 AAR 放入 libs 目录。
-
-2) 在 Module 的 build.gradle 里加入以下代码：
-
-```
-build.gradle
-repositories{
-    flatDir {
-        dirs 'libs'
-    }
-}
-
-implementation(name: 'AAR文件名', ext: 'aar')
 ```
 
 ### Wiki使用
