@@ -11,5 +11,6 @@ dependencies {
     implementation depK.core
     implementation depX.appcompat
     implementation depX.material
+    implementation kennieX.i18n
     implementation kennieX.res
 }

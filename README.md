@@ -1,4 +1,4 @@
-# KennieLibTemplate
+# AndroidLibraryTemplate
 
 <p align="center"><img src="./resources/screenshots/logo.png" width="10%"/></p>
 
