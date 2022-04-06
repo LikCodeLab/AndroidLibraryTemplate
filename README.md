@@ -84,6 +84,10 @@ implementation "com.github.kennielab:KennieLibTemplate:${lib}"
 
 具体的使用说明，请参阅 [DOC](https://kennielab.github.io/KennieLibTemplate/)
 
+## BUG/问题/建议
+
+请[issues](https://github.com/kennielab/AndroidLibraryTemplate/issues)
+    
 ## 更新日志
 - [详细日志](./UPDATELOG.md)
 
