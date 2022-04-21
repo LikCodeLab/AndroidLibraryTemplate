@@ -1,28 +1,45 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
+plugins {
+    id 'com.android.application' version '7.1.3' apply false
+    id 'com.android.library' version '7.1.3' apply false
+    id 'org.jetbrains.kotlin.android' version '1.6.21' apply false
+}
 
-    apply from: "${rootDir}/configs/dependencies/config.gradle"
-    apply from: "${rootDir}/configs/dependencies/dependenciesx.gradle"
-    apply from: "${rootDir}/configs/tools/gradle/git.gradle"
+apply from: "${rootDir}/config.gradle"
+apply from: "${rootDir}/depx.gradle"
 
-    repositories {
-        maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repositories/google' }
-        maven { url 'https://maven.aliyun.com/repository/central' }
-        maven { url 'https://jitpack.io' }
-        google()
-        mavenCentral()
+
+
+allprojects {
+    // 将构建文件统一输出到项目根目录下的 build 文件夹
+    setBuildDir(new File(rootDir, "build/${path.replaceAll(':', '/')}"))
+
+    tasks.withType(JavaCompile) {
+        // 设置全局编码
+        options.encoding = 'UTF-8'
     }
-    dependencies {
-        classpath "com.android.tools.build:gradle:7.0.3"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31"
-        // 依赖库版本检测
-        //classpath "com.github.ben-manes:gradle-versions-plugin:0.39.0"
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+    tasks.withType(Javadoc) {
+        // 设置文档编码
+        options {
+            encoding 'UTF-8'
+            charSet 'UTF-8'
+            links 'http://docs.oracle.com/javase/7/docs/api'
+        }
     }
 }
 
 task clean(type: Delete) {
-    delete rootProject.buildDir
+    println("********** clean build **********")
+    println("delete project dir: " + rootProject.buildDir)
+    rootProject.buildDir.deleteDir()
+    def dir = new File(new File(".").getAbsolutePath())
+    println("root dir: " + dir.getAbsolutePath())
+    dir.eachDirRecurse {
+        dir2 ->
+            dir2.eachDirMatch(~/build/) {
+                directory ->
+                    println("delete child dir:" + directory)
+                    directory.deleteDir()
+            }
+    }
 }

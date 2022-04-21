@@ -1,0 +1,20 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply from: "${rootDir}/tools/library.gradle"
+//apply from: "${rootDir}/publish.gradle"
+
+android {
+    defaultConfig {
+        resourcePrefix '_res'
+    }
+}
+
+
+dependencies {
+    implementation depX.ktx_core
+    implementation depX.appcompat
+    implementation depX.material
+}

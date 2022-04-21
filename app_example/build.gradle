@@ -1,23 +1,26 @@
 plugins {
     id 'com.android.application'
-    id 'kotlin-android'
+    id 'org.jetbrains.kotlin.android'
 }
 
-apply from: "${rootDir}/configs/tools/gradle/app.gradle"
+apply from: "${rootDir}/tools/app.gradle"
 
 android {
 
     defaultConfig {
         applicationId "com.kennie.example.library"
+        versionCode buildConfig.appVersionCode as Integer
+        versionName buildConfig.appVersionName
+        println("************************ 版本信息 ************************")
+        println("appVersionCode: $versionCode\nappVersionName: $versionName")
+        buildConfigField "String", "BUILD_TIME", '"' + new Date().format("yyyy-MM-dd HH:mm:ss") + '"'
     }
 
 }
 
 dependencies {
-    implementation depK.core
+    implementation depX.ktx_core
     implementation depX.appcompat
     implementation depX.material
-    implementation project(':library')
-    implementation kennieX.i18n
-    implementation kennieX.res
+    implementation project(':app_library')
 }
