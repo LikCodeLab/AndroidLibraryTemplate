@@ -15,7 +15,7 @@ ext {
 
     buildConfig = [
             compileSdk  : 32,
-            minSdk      : 22,
+            minSdk      : 24,
             targetSdk   : 32,
             appVersionCode : 1,
             appVersionName : "0.0.1",

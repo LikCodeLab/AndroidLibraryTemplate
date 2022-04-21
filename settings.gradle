@@ -20,9 +20,10 @@ rootProject.name = "AndroidLibraryTemplate"
 
 //************************演示项目 目录************************
 include ':app_example'
+include ':app_library'
 
 //************************公共库 目录************************
-include ':app_library'
+include ':res'
 
 
 

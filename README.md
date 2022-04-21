@@ -95,6 +95,24 @@ implementation "com.github.kennielab:KennieLibTemplate:${lib}"
 
 - XXXXXXXX
 
+### 开发环境
+
+``` gradle
+    Android Studio Bumblebee 2021.1.1
+    JDK 1.8 || JDK 11
+    kotlin 1.6.21
+    gradle-7.2-bin & gradle 7.1.3
+    compileSdk 32
+    minSdk 24
+    targetSdk 32
+    AndroidX
+```
+
+### 运行环境
+
+  > 手机端 Android7.0 ~ Android 12.0
+
+
 ## 赞赏
 
 **如果您觉得还不错，您可以打赏哦，您的支持将是我持续维护的动力。我将会列出所有打赏人员的清单在下方作为凭证，打赏前请留下打赏项目的备注！**
