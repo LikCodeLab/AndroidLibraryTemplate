@@ -4,13 +4,6 @@ plugins {
 }
 
 apply from: "${rootDir}/tools/library.gradle"
-//apply from: "${rootDir}/publish.gradle"
-
-android {
-    defaultConfig {
-        resourcePrefix '_res'
-    }
-}
 
 
 dependencies {

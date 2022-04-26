@@ -17,6 +17,11 @@ apply from: "${rootDir}/tools/gradle/apk_output.gradle"
 android {
 
     defaultConfig {
+        versionCode buildConfig.appVersionCode as Integer
+        versionName buildConfig.appVersionName
+        println("************************ 版本信息 ************************")
+        println("appVersionCode: $versionCode\nappVersionName: $versionName")
+        buildConfigField "String", "BUILD_TIME", '"' + new Date().format("yyyy-MM-dd HH:mm:ss") + '"'
         // 解决方法数超过64K
         multiDexEnabled true
         renderscriptTargetApi buildConfig.compileSdk

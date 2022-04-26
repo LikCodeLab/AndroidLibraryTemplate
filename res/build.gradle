@@ -3,40 +3,14 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
-apply from: "${rootDir}/config.gradle"
+apply from: "${rootDir}/tools/library.gradle"
 
 android {
-    compileSdk buildConfig.compileSdk
-
     defaultConfig {
-        minSdk buildConfig.minSdk
-        targetSdk buildConfig.targetSdk
-        versionCode buildConfig.versionCode as Integer
-        versionName buildConfig.versionName
-        consumerProguardFiles 'consumer-rules.pro'
         resourcePrefix '_res'
-        println("************************ 版本信息 ************************")
-        println("versionCode: $versionCode\nversionName: $versionName")
-        buildConfigField "String", "BUILD_TIME", '"' + new Date().format("yyyy-MM-dd HH:mm:ss") + '"'
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
     }
 }
 
 dependencies {
-    implementation depX.ktx_core
-    implementation depX.appcompat
     implementation depX.material
 }

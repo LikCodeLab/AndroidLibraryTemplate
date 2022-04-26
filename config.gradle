@@ -18,9 +18,9 @@ ext {
             minSdk      : 24,
             targetSdk   : 32,
             appVersionCode : 1,
-            appVersionName : "0.0.1",
-            versionCode : 5,
-            versionName : "0.0.5",
+            appVersionName : "1.0.0",
+            versionCode : 1,
+            versionName : "0.0.1",
     ]
 
 }

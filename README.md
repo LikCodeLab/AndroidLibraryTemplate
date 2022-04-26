@@ -19,66 +19,20 @@
 
 ## 简介
 
-Android Library 模板库
+> Android Library 模板库.
 
 如有任何疑问或者Bug，请在 github 上公开讨论[技术问题](https://github.com/kennielab/KennieLetterIndexBar/issues)
 
 **开源不易，如果喜欢的话希望给个 `Star` 或 `Fork` ^_^ ，谢谢~~**
 
-## 功能及特点
+## 目录说明
 
-- XX、XX、XX、XX；
+| 名词 | 含义 |
+| --- | --- |
+| app_example | 演示APP |
+| app_library | 演示Lib |
+| res | 通用的公共资源组件 |
 
-## APP下载
-
-- [GitHub下载](https://gitee.com/kenniecode/kennie-android/tree/template%2Flibrary/releases) [![](https://img.shields.io/badge/Download-apk-green.svg)](https://gitee.com/kenniecode/kennie-android/tree/template%2Flibrary/releases/app-release.apk)
-- 扫码
-
-![](./resources/download_qr_code.png)
-
-
-## 预览
-
-<!-- <img src="./resources/screenshots/screenshot_01.jpg" width="50%"/> -->
-
-| ![](resources/screenshots/01.jpg) | ![](resources/screenshots/02.jpg) | ![](resources/screenshots/03.jpg) | ![](resources/screenshots/04.jpg) |
-| --- | --- | --- | --- |
-| ![](resources/screenshots/05.jpg) | ![](resources/screenshots/06.jpg) | ![](art/07.jpg) | ![](resources/screenshots/08.jpg) |
-| ![](resources/screenshots/01.gif) | ![](resources/screenshots/02.gif) | ![](art/03.gif) | ![](resources/screenshots/04.gif) |
-
-
-## 开始使用
-因为依赖的关系，KennieLibTemplate 目前仅支持 AndroidX 作为基础进行开发，若您正在使用最新版本的 Android Studio，那么默认创建的项目就是使用 AndroidX 作为底层框架的。
-> **使用前请查看注意事项**，当前版本仅支持AndroidX
-
-### 📥引入
-
-#### 方式一：Gradle 引入  jitPack 源
-
-<div>
-
-Latest Version：[![](https://jitpack.io/v/kennielab/KennieLibTemplate.svg)](https://jitpack.io/#kennielab/KennieLibTemplate)
-
-1) 在 project 的 build.gradle 文件中找到 `allprojects{}` 代码块添加以下代码：
-
-```
-allprojects {
-    repositories {
-        google()
-        jcenter()
-        maven { url 'https://jitpack.io' }      //增加 jitPack Maven 仓库
-    }
-}
-```
-
-⚠️请注意，使用 Android Studio 北极狐版本（Arctic Fox）创建的项目，需要您前往 settings.gradle 添加上述 jitpack 仓库配置。
-
-2) 在 app 的 build.gradle 文件中找到 `dependencies{}` 代码块，并在其中加入以下语句：
-
-```
-def lib = "0.0.2"
-implementation "com.github.kennielab:KennieLibTemplate:${lib}"
-```
 
 ### Wiki使用
 
@@ -89,51 +43,26 @@ implementation "com.github.kennielab:KennieLibTemplate:${lib}"
 请[issues](https://github.com/kennielab/AndroidLibraryTemplate/issues)
     
 ## 更新日志
-- [详细日志](./UPDATELOG.md)
+- [详细日志](./resources/UPDATELOG.md)
 
 ### 1.0.0
 
 - XXXXXXXX
 
-### 开发环境
-
-``` gradle
-    Android Studio Bumblebee 2021.1.1
-    JDK 1.8 || JDK 11
-    kotlin 1.6.21
-    gradle-7.2-bin & gradle 7.1.3
-    compileSdk 32
-    minSdk 24
-    targetSdk 32
-    AndroidX
-```
-
-### 运行环境
-
-  > 手机端 Android7.0 ~ Android 12.0
-
-
-## 赞赏
-
-**如果您觉得还不错，您可以打赏哦，您的支持将是我持续维护的动力。我将会列出所有打赏人员的清单在下方作为凭证，打赏前请留下打赏项目的备注！**
-
-|  微信支付 |
-|--|
-|  ![SMOOTH](./resources/pay/微信支付.jpg) |
-
-感谢下面小伙伴的打赏：
-
-姓名 | 金额 | 方式
-:-|:-|:-
-*** | **￥ | 微信
-*** | *￥ | 支付宝
+## 规范化
+- **[Java 规范](./resources/docs/java_standard.md)**
+- **[Android 规范](./resources/docs/android_standard.md)**
+- **[Git 规范](./resources/docs/git_standard.md)**
+- **[Android 代码规范文档](./resources/docs/AndroidCodeStandard.md)**
+- **[阿里巴巴Android开发手册](./resources/docs/阿里巴巴Android开发手册.pdf)**
+- **[阿里巴巴Java开发手册](./resources/docs/阿里巴巴Java开发手册.pdf)**
+- **[Android 版本适配全套指南](./resources/docs/AndroidVersionAdapter.md)**
+- **[Android11 开发者手册](./resources/docs/android_11_dev_booklet.pdf)**
 
 ## 感谢
+- **[阿里矢量图](https://www.iconfont.cn/)**
+- **[花瓣](https://huaban.com/)**
 
-- [AliyunGradleConfig](https://github.com/gzu-liyujiang/AliyunGradleConfig)
-- [Android 代码规范文档](https://gitee.com/getActivity/AndroidCodeStandard)
-- [阿里矢量图](https://www.iconfont.cn/)
-- [花瓣](https://huaban.com/)
 
 ## LICENSE
 
