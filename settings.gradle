@@ -24,6 +24,7 @@ include ':app_library'
 
 //************************公共库 目录************************
 include ':res'
+include ':i18n'
 
 
 

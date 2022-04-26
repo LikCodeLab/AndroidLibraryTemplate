@@ -1,0 +1,68 @@
+/*
+ * Copyright (c) 2021 Kennie<xdpvxv@163.com>
+ *
+ * The software is licensed under the Mulan PSL v2.
+ * You can use this software according to the terms and conditions of the Mulan PSL v2.
+ * You may obtain a copy of Mulan PSL v2 at:
+ *     http://license.coscl.org.cn/MulanPSL2
+ * THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT, MERCHANTABILITY OR FIT FOR A PARTICULAR
+ * PURPOSE.
+ * See the Mulan PSL v2 for more details.
+ */
+
+ext {
+
+    versions = [
+            compileSdk  : 32,
+            minSdk      : 24,
+            targetSdk   : 32,
+
+            // Java 版本
+            javaVer     : JavaVersion.VERSION_1_8,
+            javaVer_str : "1.8",
+
+            // ===========
+            // = APP =
+            // ===========
+
+            appVersionCode : 1,
+            appVersionName : "1.0.0",
+
+            // ===========
+            // = APP Lib =
+            // ===========
+            versionCode : 1,
+            versionName : "0.0.1",
+
+            // ===========
+            // = AndroidX =
+            // ===========
+            appcompat_ver : "1.4.1",
+
+            // ===========
+            // = check 检测异常 =
+            // ===========
+            leakcanary_ver : "2.9.1",
+
+            // ===========
+            // = json 数据处理 =
+            // ===========
+            gson_ver : "2.9.0",
+
+            // ===========
+            // = image 图片处理 =
+            // ===========
+            glide_ver : "4.13.1",
+
+
+            // ===========
+            // = ARouter 路由处理 =
+            // ===========
+            arouter_ver : "1.5.2"
+
+
+
+    ]
+
+}

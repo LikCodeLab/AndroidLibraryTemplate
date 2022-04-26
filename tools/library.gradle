@@ -15,8 +15,8 @@ apply from: "${rootDir}/tools/common.gradle"
 
 android {
     defaultConfig {
-        versionCode buildConfig.versionCode as Integer
-        versionName buildConfig.versionName
+        versionCode versions.versionCode as Integer
+        versionName versions.versionName
         consumerProguardFiles 'consumer-rules.pro'
         println("************************ 版本信息 ************************")
         println("versionCode: $versionCode\nversionName: $versionName")

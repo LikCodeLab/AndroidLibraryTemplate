@@ -15,7 +15,7 @@
 println "********** apk outputs **********"
 android.applicationVariants.all { variant ->
     //def versionName = rootProject.ext.getAppVersionName()
-    def versionCode = buildConfig.appVersionCode
+    def versionCode = versions.appVersionCode
     variant.outputs.all {
         if (variant.buildType.name == 'debug') {
             //debug版本不重定义输出目录，也不重命名

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 通用的 -->
+    <string name="_loading">加载中&#8230;</string>
+    <string name="_unknown_error">未知错误</string>
+
+    <string name="_confirm">确定</string>
+    <string name="_cancel">取消</string>
+    <string name="_delete">删除</string>
+    <string name="_next">下一步</string>
+    <string name="_complete">完成</string>
+    <string name="_commit">提交</string>
+    <string name="_setting">设置</string>
+    <string name="_other">其它</string>
+    <string name="_limit">范围</string>
+    <string name="_back">返回</string>
+    <string name="_all">全部</string>
+    <string name="_search">搜索</string>
+    <string name="_save">保存</string>
+    <string name="_date">日期</string>
+    <string name="_select">选择</string>
+    <string name="_login">登录</string>
+    <string name="_register">注册</string>
+
+
+    <string name="_year">年</string>
+    <string name="_month">月</string>
+    <string name="_day">日</string>
+    <string name="_hour">时</string>
+    <string name="_minute">分</string>
+    <string name="_second">秒</string>
+
+    <string name="_crash_hint">应用出了点小意外，正在重新启动</string>
+    <string name="_network_error">当前网络不可用，请检查网络设置</string>
+    <string name="_network_hint">当前没有网络连接，请检查网络设置</string>
+    <string name="_no_more_data">没有更多数据了</string>
+
+    <!-- 默认状态布局提示信息 -->
+    <string name="_state_empty_data">暂无数据</string>
+    <string name="_state_retry">重试</string>
+    <string name="_state_error">加载失败，点击屏幕重试</string>
+    <string name="_state_network_no">没有网络，点击屏幕重试</string>
+    <string name="_state_network_error">网络错误，点击屏幕重试</string>
+    <string name="_state_timeout_error">加载超时，点击屏幕重试</string>
+    <string name="_state_login_no">您还没有登录</string>
+
+    <!-- 默认网络请求提示信息 -->
+    <string name="_http_unknown_error">请求出错，未知错误</string>
+    <string name="_http_token_error">登录失效，请重新登录</string>
+    <string name="_http_data_explain_error">数据解析异常，请稍后</string>
+    <string name="_http_server_out_time">服务器请求超时，请稍后再试</string>
+    <string name="_http_network_error">请求失败，请检查网络设置</string>
+    <string name="_http_response_error">服务器响应异常，请稍后再试</string>
+    <string name="_http_server_error">服务器连接异常，请稍后再试</string>
+    <string name="_http_request_cancel">请求被中断，请重试</string>
+</resources>

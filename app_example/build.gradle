@@ -15,8 +15,8 @@ android {
 }
 
 dependencies {
-    implementation depX.ktx_core
-    implementation depX.appcompat
-    implementation depX.material
+    implementation deps.kotlin.core
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.design
     implementation project(':app_library')
 }

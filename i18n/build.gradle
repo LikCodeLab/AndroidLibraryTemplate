@@ -5,12 +5,3 @@ plugins {
 
 apply from: "${rootDir}/tools/library.gradle"
 
-android {
-    defaultConfig {
-        resourcePrefix '_res'
-    }
-}
-
-dependencies {
-    implementation deps.androidx.design
-}

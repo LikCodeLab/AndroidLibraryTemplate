@@ -1,0 +1,268 @@
+/*
+ * Copyright (c) 2021 Kennie<xdpvxv@163.com>
+ *
+ * The software is licensed under the Mulan PSL v2.
+ * You can use this software according to the terms and conditions of the Mulan PSL v2.
+ * You may obtain a copy of Mulan PSL v2 at:
+ *     http://license.coscl.org.cn/MulanPSL2
+ * THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT, MERCHANTABILITY OR FIT FOR A PARTICULAR
+ * PURPOSE.
+ * See the Mulan PSL v2 for more details.
+ */
+
+ext {
+
+    deps = [
+            "androidx" : [
+                    // https://developer.android.google.cn/jetpack/androidx/versions
+                    // https://developer.android.google.cn/jetpack/androidx/explorer
+                    appcompat                   : "androidx.appcompat:appcompat:${versions.appcompat_ver}",
+                    appcompat_resources         : "androidx.appcompat:appcompat-resources:${versions.appcompat_ver}",
+                    fragment                    : "androidx.fragment:fragment:${versions.appcompat_ver}",
+                    // https://mvnrepository.com/artifact/com.google.android.material/material
+                    design                      : "com.google.android.material:material:1.5.0",
+                    // 方法数超过65535解决方法64K MultiDex分包方法
+                    // https://developer.android.google.cn/studio/build/multidex
+                    multidex                    : "androidx.multidex:multidex:2.0.1",
+
+                    // Palette 调色板 ( 从图片中获取颜色 )
+                    // https://mvnrepository.com/artifact/androidx.palette/palette
+                    palette                     : "androidx.palette:palette-ktx:1.0.0",
+
+                    // ConstraintLayout 可让您使用扁平视图层次结构（无嵌套视图组）创建复杂的大型布局
+                    // https://developer.android.google.cn/training/constraint-layout
+                    constraintlayout            : "androidx.constraintlayout:constraintlayout:2.1.3",
+                    // https://mvnrepository.com/artifact/androidx.recyclerview/recyclerview
+                    recyclerview                : "androidx.recyclerview:recyclerview:1.2.0",
+                    // RecyclerView复选及状态持久化
+                    recyclerview_selection      : "androidx.recyclerview:recyclerview-selection:1.1.0",
+                    // CardView看做是FrameLayout在自身之上添加了圆角和阴影效果
+                    // https://mvnrepository.com/artifact/androidx.cardview/cardview
+                    cardview                    : "androidx.cardview:cardview:1.0.0",
+                    // refresh
+                    swiperefreshlayout          : "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0",
+                    // 可伸缩布局(支持RecyclerView集成) https://github.com/google/flexbox-layout minSdk 14-30
+                    flexbox                     : "com.google.android.flexbox:flexbox:3.0.0",
+                    // GridLayout
+                    // https://mvnrepository.com/artifact/androidx.gridlayout/gridlayout
+                    gridlayout                  : "androidx.gridlayout:gridlayout:1.0.0",
+                    viewpager2                  : "androidx.viewpager2:viewpager2:1.0.0",
+
+                    // 应用启动
+                    // https://developer.android.google.cn/topic/libraries/app-startup
+                    app_startup                 : "androidx.startup:startup-runtime:1.1.1",
+                    // SQLite 扩展程序将与 SQL 相关的代码封装在事务中，从而避免编写大量样板代码。
+                    sqlite                      : "androidx.sqlite:sqlite:2.2.0",
+            ],
+
+            "kotlin" : [
+                    // https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
+                    core                        : "androidx.core:core-ktx:1.7.0",
+                    // Fragment KTX 模块提供了一系列扩展程序以简化 Fragment API。
+                    // https://mvnrepository.com/artifact/androidx.fragment/fragment-ktx
+                    fragment                    : "androidx.fragment:fragment-ktx:1.4.1",
+                    // https://developer.android.google.cn/jetpack/androidx/releases/activity
+                    activity                    : "androidx.activity:activity-ktx:1.4.0",
+                    // Collection 扩展程序包含在 Android 的节省内存的集合库中使用的实用函数，包括 ArrayMap、LongSparseArray、LruCache 等等。
+                    // https://mvnrepository.com/artifact/androidx.collection/collection
+                    collection                  : "androidx.collection:collection-ktx:1.2.0",
+                    // Palette KTX 模块为使用调色板提供惯用的 Kotlin 支持。
+                    // https://mvnrepository.com/artifact/androidx.palette/palette-ktx
+                    palette                    : "androidx.palette:palette-ktx:1.0.0",
+
+                    // Room 持久性库在 SQLite 的基础上提供了一个抽象层 https://developer.android.google.cn/training/data-storage/room
+                    room_runtime                  : "androidx.room:room-runtime:2.4.2",
+                    room_compiler                 : "androidx.room:room-compiler:2.4.2",
+                    room_ktx                      : "androidx.room:room-ktx:2.4.2",
+
+                    // SQLite 扩展程序将与 SQL 相关的代码封装在事务中，从而避免编写大量样板代码。
+                    sqlite                        : "androidx.sqlite:sqlite-ktx:2.2.0",
+            ],
+
+            "check" : [
+                    // ==============
+                    // = 检测异常crash =
+                    // ==============
+
+                    // https://github.com/square/leakcanary  minSdk 14~29
+                    leakcanary             : "com.squareup.leakcanary:leakcanary-android:${versions.leakcanary_ver}",
+
+            ],
+
+            "log" : [
+                    // ==============
+                    // = 辅助日志 =
+                    // ==============
+
+                    // https://github.com/Tencent/mars
+                    mars_xlog              : "com.tencent.mars:mars-xlog:1.2.6",
+
+            ],
+
+            "json" : [
+                    // ==============
+                    // = 数据处理 =
+                    // ==============
+
+                    // JSON处理相关支持库 https://github.com/google/gson
+                    gson                   : "com.google.code.gson:gson:${versions.gson_ver}",
+                    // 阿里巴巴 json序列化工具
+                    // https://github.com/alibaba/fastjson
+                    fastjson               : "com.alibaba:fastjson:1.1.72.android",
+
+            ],
+
+            "http" : [
+                    // ==============
+                    // = 网络请求 =
+                    // ==============
+
+                    // https://github.com/google/volley
+                    volley         : 'com.android.volley:volley:1.2.1',
+
+                    // https://github.com/square/okhttp Android 5.0+ (API level 21+) and Java 8+
+                    // https://square.github.io/okhttp/
+                    okhttp3                                     : "com.squareup.okhttp3:okhttp:4.9.3",
+                    // testImplementation("com.squareup.okhttp3:mockwebserver:4.9.1") OkHttp 包含一个用于测试 HTTP、HTTPS 和 HTTP/2 客户端的库
+                    okhttp3_mockwebserver                       : "com.squareup.okhttp3:mockwebserver:4.9.3",
+
+                    // https://github.com/square/retrofit
+                    retrofit      				        : 'com.squareup.retrofit2:retrofit:2.9.0',
+                    retrofit_mock       			    : 'com.squareup.retrofit2:retrofit-mock:2.9.0',
+                    retrofit_rxjava2_adapter			: 'com.squareup.retrofit2:adapter-rxjava2:2.9.0',
+                    retrofit_rxjava3_adapter			: 'com.squareup.retrofit2:adapter-rxjava3:2.9.0',
+                    retrofit_converter_gson 			: 'com.squareup.retrofit2:converter-gson:2.9.0',
+                    retrofit_converter_protobuf 		: 'com.squareup.retrofit2:converter-protobuf:2.9.0',
+
+                    // Java 8+ or Android API 21+ required
+                    rxjava3        				: 'io.reactivex.rxjava3:rxjava:3.1.4',
+                    rxandroid3     				: 'io.reactivex.rxjava3:rxandroid:3.0.0',
+
+                    // Java 6+ & Android 2.3+
+                    // https://github.com/ReactiveX/RxJava
+                    // https://github.com/ReactiveX/RxAndroid
+                    rxjava2        				: 'io.reactivex.rxjava2:rxjava:2.2.21',
+                    rxandroid2     				: 'io.reactivex.rxjava2:rxandroid:2.1.1',
+            ],
+
+            "image" : [
+                    // ==============
+                    // = 图片请求 =
+                    // ==============
+
+                    // https://github.com/coil-kt/coil kotlin Min SDK 14+ Java 8+ mavenCentral()
+                    coil                                : "io.coil-kt:coil:2.0.0-rc03",
+
+                    // https://github.com/bumptech/glide
+                    // https://muyangmin.github.io/glide-docs-cn/  minSdk 14 compileSdk 26
+                    glide                  		        : "com.github.bumptech.glide:glide:${versions.glide_ver}",
+                    // annotationProcessor
+                    glide_compiler         		        : "com.github.bumptech.glide:compiler:${versions.glide_ver}",
+                    // glide RecyclerView集成库
+                    glide_loader_recyclerview           : "com.github.bumptech.glide:recyclerview-integration:${versions.glide_ver}",
+                    // glide集成OkHttp3 集成库
+                    glide_loader_okhttp3   		        : "com.github.bumptech.glide:okhttp3-integration:${versions.glide_ver}",
+                    // glide集成Volley 集成库
+                    glide_loader_volley    		        : "com.github.bumptech.glide:volley-integration:${versions.glide_ver}",
+                    glide_mocks    			            : "com.github.bumptech.glide:mocks:${versions.glide_ver}",
+                    glide_gifencoder_integration        : "com.github.bumptech.glide:gifencoder-integration:${versions.glide_ver}",
+            ],
+
+            "Media" : [
+                    // ==============
+                    // = Media音视频媒体处理 =
+                    // ==============
+
+                    // https://github.com/Bilibili/ijkplayer bilibili的一个开源项目 基于ffmpeg开发，支持多种视频格式格式
+                    "ijkplayer_java"         : "tv.danmaku.ijk.media:ijkplayer-java:0.8.8",
+                    "ijkplayer_armv7a"       : "tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8",
+                    "ijkplayer_x86"          : "tv.danmaku.ijk.media:ijkplayer-x86:0.8.8",
+                    "ijkplayer_x86_64"       : "tv.danmaku.ijk.media:ijkplayer-x86_64:0.8.8",
+                    // # ExoPlayer as IMediaPlayer: optional, experimental
+                    "ijkplayer_exo"          : "tv.danmaku.ijk.media:ijkplayer-exo:0.8.8",
+            ],
+
+            "chart" : [
+                    // ==============
+                    // = 图表处理 =
+                    // ==============
+
+                    // https://github.com/PhilJay/MPAndroidChart
+                    MPAndroidChart                      : "com.github.PhilJay:MPAndroidChart:v3.1.0",
+            ],
+
+            "QR" : [
+                    // ==============
+                    // = QR二维码处理 =
+                    // ==============
+
+                    // https://github.com/zxing/zxing
+                    "zxing"                             : 'com.google.zxing:core:3.4.1',
+            ],
+
+            "SQL" : [
+                    // ==============
+                    // = SQL数据库 =
+                    // ==============
+
+                    // https://github.com/greenrobot/greenDAO
+                    // classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0' // add plugin
+                    greendao                            : "org.greenrobot:greendao:3.3.0",
+                    // SQLCipher使用 256-bit AES 加密
+                    // https://github.com/sqlcipher/android-database-sqlcipher
+                    SQLCipher                           : "net.zetetic:android-database-sqlcipher:4.5.1",
+            ],
+
+            "Refresh" : [
+                    // ==============
+                    // = Refresh刷新处理 =
+                    // ==============
+
+                    // https://github.com/scwang90/SmartRefreshLayout
+                    // 核心必须依赖
+                    smartrefreshlayout                  : 'com.scwang.smart:refresh-layout-kernel:2.0.5',
+                    // 经典刷新头
+                    smartrefresh_header_classics        : 'com.scwang.smart:refresh-header-classics:2.0.5',
+                    // 谷歌刷新头
+                    smartrefresh_header_material        : 'com.scwang.smart:refresh-header-material:2.0.5',
+                    // 经典加载
+                    smartrefresh_footer_classics        : 'com.scwang.smart:refresh-footer-classics:2.0.5',
+                    // 下拉刷新框架 ( 横向 ) https://github.com/scwang90/SmartRefreshHorizontal
+                    smartrefresh_horizontal             : "com.scwang.smart:refresh-layout-horizontal:2.0.0",
+            ],
+
+            "arouter" : [
+                    // ==============
+                    // = ARouter路由处理 =
+                    // ==============
+
+                    // https://github.com/alibaba/ARouter
+                    arouter_api                         : "com.alibaba:arouter-api:${versions.arouter_ver}",
+                    // annotationProcessor
+                    arouter_compiler                    : "com.alibaba:arouter-compiler:${versions.arouter_ver}",
+            ],
+
+
+            // ************************ 第三方组件SDK 官方支持库 ************************** //
+            "AMap" : [
+                    // ==============
+                    // = AMap高德地图 =
+                    // ==============
+
+                    // https://lbs.amap.com/api/android-sdk/guide/create-project/android-studio-create-project
+                    // 3D地图
+                    map3d     : "com.amap.api:3dmap:9.2.0",
+                    // 2D地图
+                    map2d     : "com.amap.api:map2d:6.0.0",
+                    // 导航
+                    navi_3dmap: "com.amap.api:navi-3dmap:8.1.0_3dmap8.1.0",
+                    // 搜索
+                    search    : "com.amap.api:search:8.1.0",
+                    // 定位
+                    location  : "com.amap.api:location:6.1.0",
+            ],
+
+    ]
+
+}

@@ -5,8 +5,8 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.6.21' apply false
 }
 
-apply from: "${rootDir}/config.gradle"
-apply from: "${rootDir}/depx.gradle"
+apply from: "${rootDir}/versions.gradle"
+apply from: "${rootDir}/tools/dependencies.gradle"
 
 
 
