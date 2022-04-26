@@ -23,8 +23,15 @@ include ':app_example'
 include ':app_library'
 
 //************************公共库 目录************************
+// 项目 通用资源库
 include ':res'
+project(':res').projectDir = new File('common/res')
+// 项目 国际化库
 include ':i18n'
+project(':i18n').projectDir = new File('common/i18n')
+// 项目 路由管理库
+include ':router'
+project(':router').projectDir = new File('common/router')
 
 
 

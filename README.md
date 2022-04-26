@@ -31,7 +31,7 @@
 | --- | --- |
 | app_example | 演示APP |
 | app_library | 演示Lib |
-| res | 通用的公共资源组件 |
+| common | 通用的公共资源组件 |
 
 
 ### Wiki使用

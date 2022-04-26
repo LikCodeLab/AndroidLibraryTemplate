@@ -10,5 +10,4 @@ dependencies {
     implementation deps.kotlin.core
     implementation deps.androidx.appcompat
     implementation deps.androidx.design
-    api project(':res')
 }
