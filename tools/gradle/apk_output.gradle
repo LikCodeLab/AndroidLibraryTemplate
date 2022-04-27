@@ -44,7 +44,8 @@ android.applicationVariants.all { variant ->
                     def isRelease = variant.buildType.name == 'release'
                     File outputFile = output.outputFile
                     if (outputFile != null && outputFile.name.endsWith('.apk') && isRelease) {
-                        File targetDir = rootProject.file("APP版本归档/v${versionName}-${versionCode}")
+                        def date = new Date().format("yyyyMMdd", TimeZone.getTimeZone("GMT+08:00"))
+                        File targetDir = rootProject.file("APP版本归档/v${versionName}-${date}")
                         targetDir.mkdirs()
                         copy {
                             from outputFile
